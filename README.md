@@ -1,2 +1,2 @@
 # Type Shuffle Animation
-type suffle
+type suffle getting eroor not working properly
