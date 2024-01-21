@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 18px;
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #61dca3;
+	--color-link-hover: #fff;
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: ballinger-mono, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-transform: uppercase;
+}
+
+.unbutton {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.unbutton:focus {
+	outline: none;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	display: grid;
+	gap: 1rem;
+	max-width: 830px;
+	padding: 7vh 2rem 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0;
+}
+
+.effects {
+	margin-top: auto;
+	padding: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.effects button {
+	border: 0;
+	color: inherit;
+	white-space: nowrap;
+	background: none;
+	text-transform: inherit;
+	font: inherit;
+	cursor: pointer;
+	color: var(--color-link);
+	font-size: 0.75rem;
+	text-transform: lowercase;
+}
+
+.effects button::before {
+	content: "[";
+	margin-right: 0.5rem;
+	display: inline-block;
+}
+
+.effects button::after {
+	content: "]";
+	margin-left: 0.5rem;
+	display: inline-block;
+}
+
+.effects button:hover {
+	color: var(--color-link-hover);
+}
+
+.splitting .words .word {
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 53em) {
+	.frame {
+		display: grid;
+		grid-template-columns: auto auto 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 'title prev sponsor';
+		justify-content: start;
+	}
+	.content {
+		grid-template-columns: 15ch 1fr;
+	}
+}
+
